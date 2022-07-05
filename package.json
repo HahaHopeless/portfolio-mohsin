@@ -1,33 +1,66 @@
 {
-  "name": "create-react-app-lambda",
-  "version": "0.5.0",
+  "name": "portfolio",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.19.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "^3.0.1"
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@lottiefiles/react-lottie-player": "^3.4.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "bootstrap": "^4.6.1",
+    "file-saver": "^2.0.5",
+    "gsap": "^3.8.0",
+    "jquery": "^3.6.0",
+    "lottie-react": "^2.1.0",
+    "matter-js": "^0.17.1",
+    "popper.js": "^1.16.1",
+    "react": "^16.13.1",
+    "react-animejs": "^0.5.6",
+    "react-bootstrap": "^2.2.3",
+    "react-bootstrap-icons": "^1.8.4",
+    "react-device-detect": "^2.1.2",
+    "react-dom": "^16.13.1",
+    "react-glass-cards": "^1.0.8",
+    "react-gsap": "^3.2.1",
+    "react-hook-mighty-mouse": "^1.4.31",
+    "react-intl": "^5.21.0",
+    "react-lottie": "^1.2.3",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "swiper": "^8.0.7",
+    "vanilla-tilt": "^1.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
-    "start:lambda": "netlify-lambda serve src/lambda",
-    "build": "run-p build:**",
-    "build:app": "react-scripts build",
-    "build:lambda": "netlify-lambda build src/lambda",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  },
   "devDependencies": {
-    "netlify-lambda": "^1.4.5",
-    "npm-run-all": "^4.1.5"
+    "file-loader": "^6.2.0"
   }
 }
