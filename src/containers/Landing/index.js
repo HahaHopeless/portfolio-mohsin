@@ -29,9 +29,9 @@ const Landing = () => {
         animeClass={`fade-in ${fadeInOut}`}
       />
       <Intro1 />
-      <div style={{ width: "100%", height: "20vh" }}></div>
+      <div style={{ width: "100%", height: "20vh", background: "white" }}></div>
       <Intro2 />
-      <div style={{ width: "100%", height: "30vh" }}></div>
+      <div style={{ width: "100%", height: "30vh", background: "white" }}></div>
       <Intro3 />
     </>
   );

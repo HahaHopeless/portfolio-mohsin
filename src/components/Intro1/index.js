@@ -219,8 +219,8 @@ const Intro1 = (props) => {
       <div
         className='line'
         style={{
-          width: "50vw",
-          height: "203vh",
+          width: isMobile ? "100vw" : "50vw",
+          height: isMobile ? "120vh" : "203vh",
           marginTop: "90vh",
           right: "-5vh",
           backgroundColor: "rgb(0, 104, 250)",

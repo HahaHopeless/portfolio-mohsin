@@ -169,7 +169,7 @@ const Intro2 = (props) => {
 
   return (
     <section
-      style={{ height: "100vh" }}
+      style={{ height: "100vh", background: "white" }}
       className='hero2 vw-100 d-flex flex-column align-items-center justify-content-center overflow-hidden'
     >
       {/* <Lottie
