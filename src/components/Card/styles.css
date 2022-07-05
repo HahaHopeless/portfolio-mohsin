@@ -1,0 +1,88 @@
+.card {
+  border-radius: 40px !important;
+  min-height: 60vh;
+  margin: 8vh;
+  max-width: 55%;
+  padding: 0px !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+.card-footer {
+  transition: all 0.3s ease-in;
+  border-bottom-left-radius: 40px !important;
+  border-bottom-right-radius: 40px !important;
+  height: 90px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  border: 1px solid #ffffff00;
+}
+.card-footer:hover {
+  background-color: rgba(0, 104, 250, 0.5);
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 104, 250, 0.5);
+  box-shadow: 0px 0px 15px 5px rgba(0, 104, 250, 0.5);
+  border: 1px solid rgb(75, 150, 255, 0.5);
+}
+.card:hover:before {
+  background: rgba(0, 0, 0, 0.75);
+}
+.card-footer-text {
+  font-weight: 300;
+}
+
+.card:before {
+  border-radius: 40px !important;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s linear;
+  z-index: -1;
+}
+.cardTitle {
+  font-weight: 800;
+  font-size: 5vw;
+}
+.card-header {
+  border-bottom: 0px !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+.card-text {
+  transform: translateZ(40px);
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  color: white;
+}
+.modal-content {
+  border-radius: 20px;
+}
+.button.btn-close::before {
+  content: "X";
+}
+.btn-close {
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.modal-header,
+.modal-footer {
+  border: 0px;
+}
+.x-icon {
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  color: #25435d;
+  border-radius: 100%;
+}
+.x-icon:hover {
+  background-color: rgba(38, 68, 92, 0.1);
+  border-radius: 100%;
+}
+.x-icon:active {
+  background-color: rgba(38, 68, 92, 0.3);
+}

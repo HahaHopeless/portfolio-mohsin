@@ -1,0 +1,102 @@
+.footer-container {
+  text-align: center;
+  width: 100%;
+  padding-top: 10vh;
+  position: relative;
+  height: 200px;
+
+  background-color: #2f3542;
+}
+.custom-shape-divider-top-1649009689 {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1649009689 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+  transform: rotateY(180deg);
+  /* filter: drop-shadow(0px 5px 10px rgba(0, 104, 250, 0.7)); */
+}
+
+.custom-shape-divider-top-1649009689 .shape-fill {
+  fill: #fff;
+  /* fill: #0068fa; */
+}
+.footer-content {
+  background-color: #2f3542;
+  /* background-color: #0068fa; */
+  height: 100%;
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.txt-white {
+  color: white !important;
+  font-size: 18px;
+  font-weight: 300;
+}
+.footer-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.footer-icon-big {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.icon-fill {
+  transition: all 0.2s ease-in;
+  fill: #fff;
+  margin-left: 30px;
+}
+.icon-fill:hover {
+  fill: #0068fa;
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 10px rgba(0, 104, 250, 1));
+}
+.icon-fill.linkedin:hover {
+  fill: rgba(0, 114, 177, 1);
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 10px rgba(0, 114, 177, 1));
+}
+.icon-fill.fiverr:hover {
+  fill: rgba(46, 213, 115, 1);
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 10px rgba(46, 213, 115, 1));
+}
+.icon-fill.facebook:hover {
+  fill: rgba(30, 144, 255, 1);
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 10px rgba(30, 144, 255, 1));
+}
+.icon-fill.instagram:hover {
+  fill: rgba(255, 71, 87, 1);
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 10px rgba(255, 71, 87, 1));
+}
+.icon-fill.github:hover {
+  fill: rgba(205, 97, 51, 1);
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 10px rgba(205, 97, 51, 1));
+}
+.envelope-icon {
+  transition: all 0.2s ease-in;
+  font-size: 1.6rem;
+  color: white;
+  cursor: pointer;
+}
+.envelope-icon:hover {
+  color: #0068fa;
+  filter: drop-shadow(0px 0px 10px rgba(0, 104, 250, 1));
+}

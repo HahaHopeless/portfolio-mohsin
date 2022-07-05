@@ -1,0 +1,104 @@
+.download {
+  padding: 1rem;
+  background: #efefef;
+  border: none;
+  border-radius: 0.5rem;
+  color: #444;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+  width: 170px;
+  height: auto;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7),
+    -6px -6px 10px rgba(255, 255, 255, 0.5),
+    6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
+}
+.download:hover {
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6),
+    -2px -2px 4px rgba(255, 255, 255, 0.4),
+    2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.download:active {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.7),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 2px rgba(255, 255, 255, 0.075),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.animation {
+  transform: scale(1.5);
+}
+
+.gradientText {
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+
+  font-weight: 800;
+  font-size: 14vw;
+  margin-bottom: -5vw;
+  margin-left: -0.35vw;
+  user-select: none;
+}
+
+.gradientText.blue {
+  background-color: rgb(0, 104, 255);
+  text-shadow: 0px 0px 10px rgba(0, 104, 254, 0.8);
+  /* background-image: linear-gradient(45deg, #0068fa, #627ce0); */
+}
+.gradientText.black {
+  background-color: #25435d;
+  /* text-shadow: 0px 0px 10px rgba(47, 53, 66, 0.3); */
+  /* background-image: linear-gradient(45deg, #25435d, #162c3f); */
+  margin-bottom: 0vw;
+}
+.downloadIcon {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+/* GRADIENT BUTTON */
+
+.eyes-follow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+  margin-left: -38.5vw;
+  margin-top: 2.6vh;
+  transform: rotateZ(-10deg) scale(0.4);
+}
+#left-eye {
+  margin-right: 8.5vw;
+}
+.eyes-follow > .eyes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.eyes-follow > .eyes > .eye {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background: #f3efef;
+}
+
+.eyes-follow > .eyes > .eye > .pupil {
+  background: #382e25;
+  border-radius: 50%;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 25px;
+  top: 12px;
+}

@@ -1,0 +1,184 @@
+.myTechStack {
+  transform: rotateZ(-90deg);
+}
+
+.stack-card-container {
+  border: 1px solid #0068fa;
+  border-radius: 30px;
+  padding: 20px;
+  width: 150px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.stack-card-container.gradient {
+  background-image: radial-gradient(
+      circle at 100% 100%,
+      transparent 14px,
+      #0068fa 14px,
+      #0068fa 20px,
+      transparent 20px
+    ),
+    linear-gradient(to right, #0068fa, #627ce0),
+    radial-gradient(
+      circle at 0% 100%,
+      transparent 14px,
+      #627ce0 14px,
+      #627ce0 20px,
+      transparent 20px
+    ),
+    linear-gradient(to bottom, #627ce0, #627ce0),
+    radial-gradient(
+      circle at 0% 0%,
+      transparent 14px,
+      #627ce0 14px,
+      #627ce0 20px,
+      transparent 20px
+    ),
+    linear-gradient(to left, #627ce0, #0068fa),
+    radial-gradient(
+      circle at 100% 0%,
+      transparent 14px,
+      #0068fa 14px,
+      #0068fa 20px,
+      transparent 20px
+    ),
+    linear-gradient(to top, #0068fa, #0068fa);
+  background-size: 20px 20px, calc(100% - 40px) 6px, 20px 20px,
+    6px calc(100% - 40px);
+  background-position: top left, top center, top right, center right,
+    bottom right, bottom center, bottom left, center left;
+  background-repeat: no-repeat;
+}
+
+.tech-icon {
+  width: 100px;
+  height: 100px;
+}
+
+/* .stack-card-container {
+  --angle: 0deg;
+  width: 150px;
+  height: 150px;
+  border: 5px solid;
+  border-image: linear-gradient(var(--angle), #0068fa, #e9ebff) 1;
+  border-radius: 50px;
+  animation: 50s rotate linear infinite;
+  border-radius: 120px;
+}
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+} */
+.swiper {
+  width: 300px;
+  height: 400px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* .swiper-slide:nth-child(1n) {
+  background-color: rgba(255, 99, 72, 0.65);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 25px 0px rgb(0 0 0 / 18%);
+} */
+.swiper-slide {
+  user-select: none;
+}
+.swiper-slide:nth-child(1n) {
+  /* transition: all 0.2s ease-in; */
+  background-color: rgba(255, 127, 80, 1);
+  /* backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 25%); */
+}
+
+.swiper-slide:nth-child(2n) {
+  /* background-color: rgb(250, 250, 250, 0.7); */
+  background-color: rgba(30, 144, 255, 1);
+  /* backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 25%); */
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: rgba(249, 202, 36, 1);
+  /* backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 25%); */
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: rgba(87, 96, 111, 1);
+  /* backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 25%); */
+}
+
+.swiper-slide:nth-child(5n) {
+  background-color: rgba(123, 237, 159, 1);
+  /* backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 25%); */
+}
+.blue-outline {
+  /* -webkit-text-stroke: 3px rgba(255, 255, 255, 0.6); */
+  color: #2f3542 !important;
+  /* text-shadow: 0px 0px 20px #0068fa; */
+}
+.stack-bg {
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  background-image: url("../../assets/images/stack.svg");
+  background-repeat: repeat;
+  background-origin: content-box;
+  transform: scale(1.5);
+}
+
+.swipe-hand {
+  align-self: flex-end;
+  font-size: 40px;
+
+  animation: swipeGesture 2s infinite;
+}
+
+@keyframes swipeGesture {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  25% {
+    transform: rotateZ(-50deg);
+  }
+  50% {
+    transform: rotateZ(50deg);
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+.swipe-desc {
+  margin-top: -0.8rem;
+}

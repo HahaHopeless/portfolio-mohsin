@@ -1,0 +1,24 @@
+.iMake {
+  transform: translate(130px, 90px) rotate(20deg) skew(20deg, 0deg) !important;
+}
+.apps,
+.websites {
+  -webkit-background-clip: text !important;
+  -moz-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  width: 100%;
+}
+.dot-grid-intro-2 {
+  width: 100px;
+  object-fit: contain;
+  position: absolute;
+  top: 100px;
+  right: 10vw;
+  opacity: 0.2;
+  fill: rgba(98, 125, 225) !important;
+}
+.layer2 {
+  top: 120px;
+  right: 15vw;
+}
