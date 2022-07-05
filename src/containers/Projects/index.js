@@ -24,7 +24,7 @@ const Projects = () => {
         goToUrl='https://breakingbingo.netlify.app'
         bgImage={"breakingBingo.webp"}
       />
-      <Card title='Tr@$h T@lk' adult={true} bgImage={"trashTalk.webp"} />
+      <Card title='Tr@$h T@lk' comingSoon={true} bgImage={"trashTalk.webp"} />
     </section>
   );
 };

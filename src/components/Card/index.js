@@ -29,11 +29,13 @@ const Card = (props) => {
         <div class='card-body'></div>
         <div
           className='card-footer'
-          onClick={() =>
-            !props.adult
-              ? window.open(`${props.goToUrl}`, "_blank")
-              : setIsModalVisible(true)
-          }
+          onClick={() => {
+            if (!props.comingSoon) {
+              !props.adult
+                ? window.open(`${props.goToUrl}`, "_blank")
+                : setIsModalVisible(true);
+            }
+          }}
         >
           <h3 className='card-footer-text card-text'>
             <FormattedMessage id='visitWebsite' />
@@ -70,6 +72,27 @@ const Card = (props) => {
                 {" "}
                 Adults only
               </span>
+            </span>
+          </div>
+        )}
+
+        {props.comingSoon && (
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              pointerEvents: "none",
+              backgroundColor: "rgba(0,0,0,0.7)",
+              zIndex: 99,
+              position: "absolute",
+              borderRadius: "40px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <span className='cardTitle' style={{ color: "white" }}>
+              Coming Soon
             </span>
           </div>
         )}

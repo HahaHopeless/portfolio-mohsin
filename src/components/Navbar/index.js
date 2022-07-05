@@ -35,7 +35,7 @@ const Navbar = (props) => {
       expand='lg'
       bg='white'
       fixed='top'
-      style={{ padding: "1rem" }}
+      style={{ padding: "1rem", zIndex: 999 }}
     >
       <Container>
         <BSNavbar.Toggle aria-controls='responsive-navbar-nav' />
