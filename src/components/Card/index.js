@@ -27,20 +27,20 @@ const Card = (props) => {
       >
         <h1 className='cardTitle card-header card-text'>{props.title}</h1>
         <div class='card-body'></div>
-        <div
-          className='card-footer'
-          onClick={() => {
-            if (!props.comingSoon) {
+        {!props.comingSoon && (
+          <div
+            className='card-footer'
+            onClick={() => {
               !props.adult
                 ? window.open(`${props.goToUrl}`, "_blank")
                 : setIsModalVisible(true);
-            }
-          }}
-        >
-          <h3 className='card-footer-text card-text'>
-            <FormattedMessage id='visitWebsite' />
-          </h3>
-        </div>
+            }}
+          >
+            <h3 className='card-footer-text card-text'>
+              <FormattedMessage id='visitWebsite' />
+            </h3>
+          </div>
+        )}
         {props.adult && (
           <div
             style={{
@@ -92,7 +92,7 @@ const Card = (props) => {
             }}
           >
             <span className='cardTitle' style={{ color: "white" }}>
-              Coming Soon
+              <FormattedMessage id='comingSoon' />
             </span>
           </div>
         )}
