@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 import { saveAs } from "file-saver";
 import dpImage from "../../assets/images/dp.png";
+import { isMobile, isTablet, isDesktop } from "react-device-detect";
 
 const Intro1 = (props) => {
   const handleDownload = () => {
@@ -188,7 +189,8 @@ const Intro1 = (props) => {
   // };
 
   const style = {
-    height: "360px",
+    // height: isMobile ? "230px" : "360px",
+    height: isMobile ? "235px" : "360px",
     width: "100%",
     marginTop: "10vh",
     userSelect: "none",
@@ -227,25 +229,30 @@ const Intro1 = (props) => {
         }}
       ></div>
       <div className='container-fluid row '>
-        <div className='col-md-7'>
+        <div className='col-md-7' style={{ marginTop: isMobile && "4rem" }}>
           <div style={{ textJustify: "inter-word", textAlign: "left" }}>
             <h1
               className='hiIm'
               style={{
                 fontWeight: "800",
-                fontSize: "4vw",
+                fontSize: isMobile ? "2rem" : "4vw",
                 // textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
                 userSelect: "none",
-                marginBottom: "-3vh",
+                marginBottom: isMobile ? "-0.5rem" : "-3vh",
               }}
             >
               <FormattedMessage id='helloIm' />
             </h1>
-            <h1 className='mohsin gradientText blue'>Mohsin</h1>
+            <h1
+              className='mohsin gradientText blue'
+              style={{ fontSize: isMobile && "5.5rem" }}
+            >
+              Mohsin
+            </h1>
             <h1
               className='kamalakbar gradientText black'
               style={{
-                fontSize: "8vw",
+                fontSize: isMobile ? "3rem" : "8vw",
                 marginLeft: "0.08vw",
               }}
             >
@@ -286,7 +293,10 @@ const Intro1 = (props) => {
           </div>
         </div>
 
-        <div className='col-md-5 d-flex align-items-start animation dp'>
+        <div
+          className='col-md-5 d-flex align-items-start animation dp'
+          style={{ marginTop: isMobile && "4rem" }}
+        >
           {/* <Lottie
             animationData={animationData}
             // interactivity={interactivity}
