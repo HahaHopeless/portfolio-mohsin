@@ -83,8 +83,6 @@ const Card = (props) => {
               height: "100%",
               pointerEvents: "none",
               backgroundColor: "rgba(0,0,0,0.7)",
-              zIndex: 99,
-              position: "absolute",
               borderRadius: "40px",
               display: "flex",
               justifyContent: "center",

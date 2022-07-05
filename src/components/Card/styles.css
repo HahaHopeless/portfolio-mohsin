@@ -12,8 +12,9 @@
 
 .card-footer {
   transition: all 0.3s ease-in;
-  border-bottom-left-radius: 40px !important;
-  border-bottom-right-radius: 40px !important;
+  /* border-bottom-left-radius: 40px !important;
+  border-bottom-right-radius: 40px !important; */
+  border-radius: 40px !important;
   height: 90px;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.4);
