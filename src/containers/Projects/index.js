@@ -5,6 +5,8 @@ import Card from "../../components/Card";
 
 const Projects = () => {
   useEffect(() => {
+    window.scroll(0, 0);
+
     VanillaTilt.init(document.querySelectorAll(".js-tilt"), {
       max: 15,
       reverse: true,

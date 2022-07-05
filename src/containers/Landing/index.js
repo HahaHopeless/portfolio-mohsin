@@ -14,9 +14,13 @@ const Landing = () => {
     }, 200);
   };
 
-  // useEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-  // }, []);
+  useEffect(() => {
+    ScrollTrigger.refresh();
+    window.scroll(0, 0);
+    // window.scrollTo({
+    //   top: 0,
+    // });
+  }, []);
 
   return (
     <>
