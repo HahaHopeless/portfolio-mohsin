@@ -4,7 +4,7 @@ import { IntlProvider } from "react-intl";
 import { connect } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
 import ReactAnime from "react-animejs";
-import { isMobile, isTablet, isDesktop } from "react-device-detect";
+// import { isMobile, isTablet, isDesktop } from "react-device-detect";
 import Navbar from "../components/Navbar";
 import Routes from "../Routes";
 import BackToTop from "../components/BackToTop";
@@ -28,9 +28,9 @@ const App = (props) => {
     // if (isMobile === true) console.log("Mobile Device");
     // else if (isDesktop === true) console.log("Desktop");
     // else if (isTablet === true) console.log("Tablet");
-    console.log("isMobile: ", isMobile);
-    console.log("isTablet: ", isTablet);
-    console.log("isDesktop: ", isDesktop);
+    // console.log("isMobile: ", isMobile);
+    // console.log("isTablet: ", isTablet);
+    // console.log("isDesktop: ", isDesktop);
   };
 
   useEffect(() => {

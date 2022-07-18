@@ -13,9 +13,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 import { saveAs } from "file-saver";
 import dpImage from "../../assets/images/dp.png";
-import { isMobile, isTablet, isDesktop } from "react-device-detect";
+// import { deviceType === 'mobile', isTablet, isDesktop } from "react-device-detect";
 
-const Intro1 = (props) => {
+const Intro1 = ({ deviceType }) => {
   const handleDownload = () => {
     //Use the commented part only when you get the CONTENT of the file instead of the whole file...
     // let blob = new Blob([require("../../assets/documents/CV.docx")], {
@@ -189,8 +189,8 @@ const Intro1 = (props) => {
   // };
 
   const style = {
-    // height: isMobile ? "230px" : "360px",
-    height: isMobile ? "235px" : "360px",
+    // height: deviceType === 'mobile' ? "230px" : "360px",
+    height: deviceType === "mobile" ? "235px" : "360px",
     width: "100%",
     marginTop: "10vh",
     userSelect: "none",
@@ -214,13 +214,13 @@ const Intro1 = (props) => {
   return (
     <div
       style={{ height: "100vh" }}
-      className='hero vw-100 d-flex flex-column align-items-center justify-content-center overflow-hidden'
+      className='hero  d-flex flex-column align-items-center justify-content-center overflow-hidden'
     >
       <div
         className='line'
         style={{
-          width: isMobile ? "100vw" : "50vw",
-          height: isMobile ? "120vh" : "203vh",
+          width: deviceType === "mobile" ? "100vw" : "50vw",
+          height: deviceType === "mobile" ? "120vh" : "203vh",
           marginTop: "90vh",
           right: "-5vh",
           backgroundColor: "rgb(0, 104, 250)",
@@ -229,30 +229,33 @@ const Intro1 = (props) => {
         }}
       ></div>
       <div className='container-fluid row '>
-        <div className='col-md-7' style={{ marginTop: isMobile && "4rem" }}>
+        <div
+          className='col-md-7'
+          style={{ marginTop: deviceType === "mobile" && "4rem" }}
+        >
           <div style={{ textJustify: "inter-word", textAlign: "left" }}>
             <h1
               className='hiIm'
               style={{
                 fontWeight: "800",
-                fontSize: isMobile ? "2rem" : "4vw",
+                fontSize: deviceType === "mobile" ? "2rem" : "4vw",
                 // textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
                 userSelect: "none",
-                marginBottom: isMobile ? "-0.5rem" : "-3vh",
+                marginBottom: deviceType === "mobile" ? "-0.5rem" : "-3vh",
               }}
             >
               <FormattedMessage id='helloIm' />
             </h1>
             <h1
               className='mohsin gradientText blue'
-              style={{ fontSize: isMobile && "5.5rem" }}
+              style={{ fontSize: deviceType === "mobile" && "5.5rem" }}
             >
               Mohsin
             </h1>
             <h1
               className='kamalakbar gradientText black'
               style={{
-                fontSize: isMobile ? "3rem" : "8vw",
+                fontSize: deviceType === "mobile" ? "3rem" : "8vw",
                 marginLeft: "0.08vw",
               }}
             >
@@ -295,7 +298,7 @@ const Intro1 = (props) => {
 
         <div
           className='col-md-5 d-flex align-items-start animation dp'
-          style={{ marginTop: isMobile && "4rem" }}
+          style={{ marginTop: deviceType === "mobile" && "4rem" }}
         >
           {/* <Lottie
             animationData={animationData}

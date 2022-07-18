@@ -9,7 +9,7 @@ import { Timeline } from "gsap/gsap-core";
 
 import dotGrid from "../../assets/images/dotGrid2.svg";
 
-const Intro2 = (props) => {
+const Intro2 = ({ deviceType }) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -32,7 +32,9 @@ const Intro2 = (props) => {
       },
       {
         opacity: 1,
-        translateX: "translate(130px, 90px) rotate(20deg) skew(20deg, 0deg)",
+        translateX: `translate(130px, ${
+          deviceType === "mobile" ? "70px" : "90px"
+        }) rotate(20deg) skew(20deg, 0deg)`,
         scrollTrigger: {
           // trigger: ".iMake",
           trigger: ".hero2",
@@ -123,7 +125,7 @@ const Intro2 = (props) => {
         {
           transform: "scale(6)",
           opacity: 0.08,
-          marginTop: "100px",
+          marginTop: "120px",
           marginRight: "100px",
           scrollTrigger: {
             trigger: ".hero2",
@@ -170,7 +172,7 @@ const Intro2 = (props) => {
   return (
     <section
       style={{ height: "100vh", background: "white" }}
-      className='hero2 vw-100 d-flex flex-column align-items-center justify-content-center overflow-hidden'
+      className='hero2  d-flex flex-column align-items-center justify-content-center overflow-hidden'
     >
       {/* <Lottie
         isStopped={false}
@@ -194,15 +196,19 @@ const Intro2 = (props) => {
       />
 
       <div className='container-fluid row '>
-        <div className='col-md-4 d-flex align-items-start animation'>
+        <div
+          className={`col-md-4 d-flex align-items-start ${
+            deviceType === "mobile" ? "animation-mobile" : "animation"
+          }`}
+        >
           <Lottie
             isStopped={false}
             style={{
               zIndex: 99,
               userSelect: "none",
               cursor: "default",
-              width: 400,
-              height: 500,
+              width: deviceType === "mobile" ? "75vw" : 400,
+              height: deviceType === "mobile" ? "350px" : 500,
             }}
             animationData={animationData}
           />
@@ -210,16 +216,15 @@ const Intro2 = (props) => {
         <div
           className='col-md-7 d-flex justify-content-center  flex-column'
           style={{
-            marginLeft: "5vw",
+            marginLeft: deviceType === "mobile" ? "-8vw" : "5vw",
             display: "inline-block",
-            zIndex: 999,
           }}
         >
           <h1
             className='iMake'
             style={{
               fontWeight: "800",
-              fontSize: "4vw",
+              fontSize: deviceType === "mobile" ? "7vw" : "4vw",
               // textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               userSelect: "none",
               // marginBottom: "-3vw",
@@ -232,13 +237,14 @@ const Intro2 = (props) => {
             className='appsAnd'
             style={{
               fontWeight: "900",
-              fontSize: "10.5vw",
+              fontSize: deviceType === "mobile" ? "18vw" : "10.5vw",
               // textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               marginLeft: "-0.35vw",
               userSelect: "none",
               // textOverflow: "clip",
+              marginTop: deviceType === "mobile" && "1vh",
               overflow: "hidden",
-              marginBottom: "-5vw",
+              marginBottom: deviceType === "mobile" ? "-3vh" : "-5vw",
               whiteSpace: "nowrap",
               display: "inline-block",
               transform: "skew(-60deg,20deg) scaleY(0.6) translate(70px, 0px)",
@@ -250,7 +256,7 @@ const Intro2 = (props) => {
               className='and'
               style={{
                 fontWeight: "400",
-                fontSize: "8vw",
+                fontSize: deviceType === "mobile" ? "15vw" : "8vw",
                 // textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
                 marginLeft: "-0.35vw",
                 userSelect: "none",
@@ -266,11 +272,12 @@ const Intro2 = (props) => {
             className='websites'
             style={{
               fontWeight: "900",
-              fontSize: "10.5vw",
+              fontSize: deviceType === "mobile" ? "18vw" : "10.5vw",
               // textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               userSelect: "none",
               transformOrigin: "bottom",
               transform: "skew(0deg, 21deg)",
+              width: deviceType === "mobile" && "100vw",
             }}
           >
             WEBSITES
