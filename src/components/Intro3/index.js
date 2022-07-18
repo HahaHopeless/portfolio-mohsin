@@ -13,7 +13,7 @@ import "../../../node_modules/swiper/modules/effect-cards/effect-cards.min.css";
 import "./styles.css";
 import { FormattedMessage } from "react-intl";
 
-export default function Intro3() {
+export default function Intro3({ deviceType }) {
   // var swiper = new Swiper(".swiper-container", {
   //   spaceBetween: 30,
   //   pagination: {
@@ -115,7 +115,12 @@ export default function Intro3() {
       style={{ padding: "30px" }}
     >
       <div className='stack-bg'></div>
-      <div className='col-md-6' style={{ marginTop: "15vh" }}>
+      <div
+        className={`col-md-6 ${
+          deviceType === "mobile" && "intro-3-mobile-title"
+        }`}
+        style={{ marginTop: "15vh" }}
+      >
         {/* <h1
           style={{
             fontSize: "14vw",
@@ -141,42 +146,62 @@ export default function Intro3() {
           STACK
         </h1>
       </div>
-      <div className='col-md-6 cards-stack' style={{ textAlign: "center" }}>
+      <div className={`col-md-6 cards-stack`} style={{ textAlign: "center" }}>
         <Swiper
           effect={"cards"}
           grabCursor={true}
           modules={[EffectCards]}
-          className='mySwiper'
+          className={`mySwiper ${deviceType === "mobile" && "mobile-swiper"}`}
           spaceBetween={35}
         >
           <SwiperSlide>
             <img
               src={require("../../assets/icons/html5.svg")}
-              style={{ width: "290px", height: "320px", objectFit: "contain" }}
+              style={{
+                width: "290px",
+                height: "320px",
+                objectFit: "contain",
+              }}
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={require("../../assets/icons/css3.svg")}
-              style={{ width: "290px", height: "320px", objectFit: "contain" }}
+              style={{
+                width: "290px",
+                height: "320px",
+                objectFit: "contain",
+              }}
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={require("../../assets/icons/js.svg")}
-              style={{ width: "400px", height: "320px", objectFit: "contain" }}
+              style={{
+                width: "400px",
+                height: "320px",
+                objectFit: "contain",
+              }}
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={require("../../assets/icons/react.svg")}
-              style={{ width: "250px", height: "320px", objectFit: "contain" }}
+              style={{
+                width: "250px",
+                height: "320px",
+                objectFit: "contain",
+              }}
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={require("../../assets/icons/nodejs.svg")}
-              style={{ width: "250px", height: "320px", objectFit: "contain" }}
+              style={{
+                width: "250px",
+                height: "320px",
+                objectFit: "contain",
+              }}
             />
           </SwiperSlide>
           {/* <SwiperSlide>Mongo DB</SwiperSlide>

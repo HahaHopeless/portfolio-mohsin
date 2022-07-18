@@ -182,3 +182,11 @@
 .swipe-desc {
   margin-top: -0.8rem;
 }
+.mobile-swiper {
+  transform: scale(0.7) !important;
+}
+.intro-3-mobile-title {
+  margin-top: 15vh;
+  transform: scale(1.5);
+  margin-left: 26vw;
+}
