@@ -26,7 +26,13 @@ const Card = (props) => {
         }}
       >
         <h1 className='cardTitle card-header card-text'>{props.title}</h1>
-        <div class='card-body'></div>
+        <div className='card-body'>
+          {props.descriptionId && (
+            <p className='card-description card-text'>
+              <FormattedMessage id={props.descriptionId} />
+            </p>
+          )}
+        </div>
         {!props.comingSoon && (
           <div
             className='card-footer'

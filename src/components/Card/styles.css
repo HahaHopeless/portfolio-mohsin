@@ -1,8 +1,9 @@
 .card {
   border-radius: 40px !important;
   min-height: 60vh;
-  margin: 8vh;
-  max-width: 55%;
+  margin: 5vh 3vh;
+  max-width: 85%;
+  width: 100%;
   padding: 0px !important;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,16 +11,45 @@
   transform: perspective(1000px);
 }
 
+@media (min-width: 768px) {
+  .card {
+    max-width: 70%;
+    margin: 6vh 4vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+    max-width: 55%;
+    margin: 8vh;
+  }
+}
+
 .card-footer {
   transition: all 0.3s ease-in;
   /* border-bottom-left-radius: 40px !important;
   border-bottom-right-radius: 40px !important; */
   border-radius: 40px !important;
-  height: 90px;
+  height: 70px;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   border: 1px solid #ffffff00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .card-footer {
+    height: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-footer {
+    height: 90px;
+  }
 }
 .card-footer:hover {
   background-color: rgba(0, 104, 250, 0.5);
@@ -49,11 +79,24 @@
 }
 .cardTitle {
   font-weight: 800;
-  font-size: 5vw;
+  font-size: 8vw;
+}
+
+@media (min-width: 768px) {
+  .cardTitle {
+    font-size: 6vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .cardTitle {
+    font-size: 5vw;
+  }
 }
 .card-header {
   border-bottom: 0px !important;
   background-color: rgba(0, 0, 0, 0) !important;
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem !important;
 }
 .card-text {
   transform: translateZ(40px);

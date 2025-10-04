@@ -23,11 +23,13 @@ const Projects = () => {
         title='Breaking Bingo'
         goToUrl='https://breakingbingo.netlify.app'
         bgImage={"breakingBingo.webp"}
+        descriptionId='breakingBingoDescription'
       />
       <Card
-        // title='Tr@$h T@lk'
-        comingSoon={true}
-        bgImage={"trashTalk.webp"}
+        title='ResumeUstaad'
+        goToUrl='https://resumeustaad.com'
+        bgImage={"resumeUstaad.webp"}
+        descriptionId='resumeUstaadDescription'
       />
     </section>
   );

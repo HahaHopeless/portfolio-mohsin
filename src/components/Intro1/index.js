@@ -220,9 +220,9 @@ const Intro1 = ({ deviceType }) => {
         className='line'
         style={{
           width: deviceType === "mobile" ? "100vw" : "50vw",
-          height: deviceType === "mobile" ? "120vh" : "203vh",
-          marginTop: "90vh",
-          right: "-5vh",
+          height: deviceType === "mobile" ? "150vh" : "203vh",
+          marginTop: deviceType === "mobile" ? "110vh" : "150vh",
+          right: deviceType === "mobile" ? "-2vh" : "-5vh",
           backgroundColor: "rgb(0, 104, 250)",
           position: "absolute",
           // transform: "rotate(45deg)",
