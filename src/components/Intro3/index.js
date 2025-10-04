@@ -1,15 +1,16 @@
 import React, { useRef, useState, useEffect } from "react";
 // Import Swiper React components
-import { SwiperSlide } from "swiper/react/swiper-slide";
-import { Swiper } from "swiper/react/swiper";
-import { EffectCards } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-cards";
+// import required modules
+import { EffectCards } from "swiper/modules";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import { Timeline } from "gsap/gsap-core";
 
-import "../../../node_modules/swiper/swiper-bundle.min.css";
-import "../../../node_modules/swiper/modules/effect-cards/effect-cards.min.css";
 import "./styles.css";
 import { FormattedMessage } from "react-intl";
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { withRouter, Switch, Route } from "react-router-dom";
+import { Routes as RouterRoutes, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import Footer from "./components/Footer";
 import Landing from "./containers/Landing";
@@ -37,15 +37,15 @@ const Routes = () => {
 
   return (
     <main>
-      <Switch>
-        <Route exact path='/' component={Landing} />
-        <Route exact path='/projects' component={Projects} />
-        {/* <Route exact path='/contact' component={Contact} /> */}
-        <Route component={NotFound} />
-      </Switch>
+      <RouterRoutes>
+        <Route path='/' element={<Landing />} />
+        <Route path='/projects' element={<Projects />} />
+        {/* <Route path='/contact' element={<Contact />} /> */}
+        <Route path='*' element={<NotFound />} />
+      </RouterRoutes>
       <Footer deviceType={deviceType} />
     </main>
   );
 };
 
-export default withRouter(connect(null, null)(Routes));
+export default connect(null, null)(Routes);
