@@ -57,13 +57,7 @@ const Navbar = (props) => {
   return (
     <header className={`modern-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
-        <div className="logo">
-          <Link to="/">
-            <span className="logo-text">Portfolio</span>
-          </Link>
-        </div>
-        
-        <div className="desktop-menu">
+        <div className="nav-center">
           <nav className="nav-links">
             <Link 
               to="/" 
@@ -78,8 +72,11 @@ const Navbar = (props) => {
               <FormattedMessage id="projects" />
             </Link>
           </nav>
+        </div>
+        
+        <div className="desktop-menu">
           
-          <div className="lang-selector" onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}>
+          <div className="lang-selector animated" onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}>
             <img
               src={require(`../../assets/icons/${props.lang}.svg`)}
               className="lang-icon"
@@ -87,38 +84,36 @@ const Navbar = (props) => {
             />
             <span className="lang-current">{props.lang.toUpperCase()}</span>
             
-            {isLangMenuOpen && (
-              <div className="lang-dropdown">
-                <div 
-                  className={`lang-option ${props.lang === "en" ? "active" : ""}`}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setLang("en");
-                  }}
-                >
-                  <img
-                    src={require("../../assets/icons/en.svg")}
-                    className="lang-icon"
-                    alt="English"
-                  />
-                  <span>EN</span>
-                </div>
-                <div 
-                  className={`lang-option ${props.lang === "de" ? "active" : ""}`}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setLang("de");
-                  }}
-                >
-                  <img
-                    src={require("../../assets/icons/de.svg")}
-                    className="lang-icon"
-                    alt="Deutsch"
-                  />
-                  <span>DE</span>
-                </div>
+            <div className={`lang-dropdown ${isLangMenuOpen ? 'visible' : ''}`}>
+              <div 
+                className={`lang-option ${props.lang === "en" ? "active" : ""}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setLang("en");
+                }}
+              >
+                <img
+                  src={require("../../assets/icons/en.svg")}
+                  className="lang-icon"
+                  alt="English"
+                />
+                <span>EN</span>
               </div>
-            )}
+              <div 
+                className={`lang-option ${props.lang === "de" ? "active" : ""}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setLang("de");
+                }}
+              >
+                <img
+                  src={require("../../assets/icons/de.svg")}
+                  className="lang-icon"
+                  alt="Deutsch"
+                />
+                <span>DE</span>
+              </div>
+            </div>
           </div>
         </div>
         
