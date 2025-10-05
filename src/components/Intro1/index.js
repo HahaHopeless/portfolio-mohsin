@@ -29,141 +29,133 @@ const Intro1 = ({ deviceType }) => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    var t1 = new Timeline();
-    // var t2 = new Timeline();
-    // var t3 = new Timeline();
-    // var t4 = new Timeline();
-    // var t5 = new Timeline();
+    
+    // Create a context for this component's animations
+    const ctx = gsap.context(() => {
+      var t1 = new Timeline();
 
-    t1.fromTo(
-      ".dp",
-      { opacity: 0, translateY: -100 },
-      {
-        opacity: 1,
-        translateY: 0,
-        overflow: "hidden",
-        scrollTrigger: {
-          trigger: ".dp",
-          toggleActions: "play none none none",
-          start: "center center",
-          end: "bottom ",
-          scrub: 2,
-        },
-      }
-    )
-      .fromTo(
-        ".hiIm",
-        { opacity: 0, translateX: -30 },
+      t1.fromTo(
+        ".dp",
+        { opacity: 0, translateY: -100 },
         {
           opacity: 1,
-          translateX: 10,
+          translateY: 0,
+          overflow: "hidden",
           scrollTrigger: {
-            trigger: ".hiIm",
-            toggleActions: "play none none none",
-            start: "top center",
-            end: "bottom center",
-            scrub: 1.5,
-          },
-        }
-      )
-      .fromTo(
-        ".mohsin",
-        { scale: 2, opacity: 0 },
-        {
-          scale: 1,
-          opacity: 1,
-          scrollTrigger: {
-            trigger: ".mohsin",
+            trigger: ".dp",
             toggleActions: "play none none none",
             start: "center center",
-            end: "bottom top",
-            scrub: 1,
-            // onLeave: () => {},
-            // onEnterBack: () => {},
+            end: "bottom ",
+            scrub: 2,
           },
         }
       )
-      .fromTo(
-        ".kamalakbar",
-        { translateY: 200, opacity: 0 },
-        {
-          translateY: 0,
-          opacity: 1,
+        .fromTo(
+          ".hiIm",
+          { opacity: 0, translateX: -30 },
+          {
+            opacity: 1,
+            translateX: 10,
+            scrollTrigger: {
+              trigger: ".hiIm",
+              toggleActions: "play none none none",
+              start: "top center",
+              end: "bottom center",
+              scrub: 1.5,
+            },
+          }
+        )
+        .fromTo(
+          ".mohsin",
+          { scale: 2, opacity: 0 },
+          {
+            scale: 1,
+            opacity: 1,
+            scrollTrigger: {
+              trigger: ".mohsin",
+              toggleActions: "play none none none",
+              start: "center center",
+              end: "bottom top",
+              scrub: 1,
+            },
+          }
+        )
+        .fromTo(
+          ".kamalakbar",
+          { translateY: 200, opacity: 0 },
+          {
+            translateY: 0,
+            opacity: 1,
+            scrollTrigger: {
+              trigger: ".kamalakbar",
+              toggleActions: "play none none none",
+              start: "top -5%",
+              end: "bottom center",
+              scrub: 1,
+            },
+          }
+        )
+        .fromTo(
+          ".imADeveloper",
+          { transform: "scaleY(0)" },
+          {
+            transform: "scaleY(1)",
+            scrollTrigger: {
+              trigger: ".imADeveloper",
+              toggleActions: "play none none none",
+              start: "top -5%",
+              end: "bottom center",
+              scrub: 1,
+            },
+          }
+        )
+        .fromTo(
+          ".btn-hover",
+          { width: 0 },
+          {
+            width: 150,
+            scrollTrigger: {
+              trigger: ".btn-hover",
+              toggleActions: "play none none none",
+              start: "top -80%",
+              end: "bottom center",
+              scrub: 0.2,
+              ease: "bounce",
+            },
+          }
+        )
+        .fromTo(
+          ".line",
+          {
+            transform: "translate3d(1000px, -1000px, 0px) rotate(45deg)",
+          },
+          {
+            transform: "translate3d(0px, 0px, 0px) rotate(45deg)",
+            scrollTrigger: {
+              trigger: ".line",
+              toggleActions: "play none none none",
+              start: "+=120%",
+              end: "+=125%",
+              scrub: 1,
+              ease: "bounce",
+            },
+          }
+        )
+        .to(".hero", {
           scrollTrigger: {
-            trigger: ".kamalakbar",
-            toggleActions: "play none none none",
-            start: "top -5%",
-            end: "bottom center",
-            scrub: 1,
+            trigger: ".hero",
+            pin: ".hero",
+            start: "center center",
+            end: "+=1800",
+            ease: "ease-in",
           },
-        }
-      )
-      .fromTo(
-        ".imADeveloper",
-        { transform: "scaleY(0)" },
-        {
-          transform: "scaleY(1)",
-          scrollTrigger: {
-            trigger: ".imADeveloper",
-            toggleActions: "play none none none",
-            start: "top -5%",
-            end: "bottom center",
-            scrub: 1,
-          },
-        }
-      )
-      .fromTo(
-        ".btn-hover",
-        { width: 0 },
-        {
-          width: 150,
-          scrollTrigger: {
-            trigger: ".btn-hover",
-            toggleActions: "play none none none",
-            start: "top -80%",
-            end: "bottom center",
-            scrub: 0.2,
-            ease: "bounce",
-          },
-        }
-      )
-      .fromTo(
-        ".line",
-        {
-          // height: "0vh",
-          transform: "translate3d(1000px, -1000px, 0px) rotate(45deg)",
-        },
-        {
-          // height: "200vh",
-          transform: "translate3d(0px, 0px, 0px) rotate(45deg)",
-          scrollTrigger: {
-            trigger: ".line",
-            toggleActions: "play none none none",
-            start: "+=120%",
-            end: "+=125%",
-            scrub: 1,
-            ease: "bounce",
-          },
-        }
-      )
-      .to(".hero", {
-        scrollTrigger: {
-          trigger: ".hero",
-          pin: ".hero",
-          start: "center center",
-          end: "+=1800",
-          ease: "ease-in",
-          // scrub: true,
-          // markers: true,
-        },
-      });
+        });
+    });
 
-    //ScrollTrigger broke react-router. Below is a fix for it.
+    // Comprehensive cleanup function
     return () => {
-      ScrollTrigger.getAll().forEach((instance) => {
-        instance.kill();
-      });
-      gsap.killTweensOf(window);
+      // Revert all GSAP animations created in this context
+      ctx.revert();
     };
   }, []);
 

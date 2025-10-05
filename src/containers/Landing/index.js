@@ -1,6 +1,7 @@
 import "./styles.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useLayoutEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
 import ScrollUp from "../../components/ScrollUp";
 import Intro1 from "../../components/Intro1";
 import Intro2 from "../../components/Intro2";
@@ -14,32 +15,48 @@ const Landing = () => {
   };
 
   const [deviceType, setDeviceType] = useState("");
+  
+  // Create a ref to store the GSAP context
+  const [ctx] = useState(() => gsap.context(() => {}));
 
-  useEffect(() => {
-    ScrollTrigger.refresh();
+  // Use useLayoutEffect to ensure DOM manipulation happens before browser paint
+  useLayoutEffect(() => {
+    // Register ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Refresh ScrollTrigger to recalculate all positions and states
+    ScrollTrigger.refresh(true);
+    
+    // Scroll to top of page
     window.scroll(0, 0);
-  }, []);
+    
+    // Return cleanup function
+    return () => {
+      // Kill all ScrollTrigger instances
+      ScrollTrigger.getAll().forEach(t => t.kill());
+      
+      // Kill all GSAP animations
+      ctx.revert(); // This will kill all GSAP animations created by this context
+    };
+  }, [ctx]);
 
   useEffect(() => {
     function handleResize() {
-      console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
-
+      // Determine device type based on window width
       if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
-        console.log("Laptop Screen");
         setDeviceType("laptop");
       } else if (window.innerWidth >= 481 && window.innerWidth <= 768) {
-        console.log("Tablet Screen");
         setDeviceType("tablet");
       } else if (window.innerWidth >= 320 && window.innerWidth <= 480) {
-        console.log("Mobile Screen");
         setDeviceType("mobile");
       } else if (window.innerWidth >= 1025) {
-        console.log("Desktop Screen");
         setDeviceType("desktop");
       }
     }
+    
     handleResize();
     window.addEventListener("resize", handleResize);
+    
     return () => {
       window.removeEventListener("resize", handleResize);
     };
