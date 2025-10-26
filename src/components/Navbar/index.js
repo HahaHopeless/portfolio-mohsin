@@ -6,6 +6,10 @@ import { FormattedMessage } from "react-intl";
 import { setGlobalLanguage } from "../../store/actionTypes";
 import { useLocation } from "react-router-dom";
 
+// Import flag icons
+import enFlag from "../../assets/icons/en.svg";
+import deFlag from "../../assets/icons/de.svg";
+
 const Navbar = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -78,7 +82,7 @@ const Navbar = (props) => {
           
           <div className="lang-selector animated" onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}>
             <img
-              src={require(`../../assets/icons/${props.lang}.svg`).default}
+              src={props.lang === "en" ? enFlag : deFlag}
               className="lang-icon"
               alt={props.lang}
             />
@@ -93,7 +97,7 @@ const Navbar = (props) => {
                 }}
               >
                 <img
-                  src={require("../../assets/icons/en.svg").default}
+                  src={enFlag}
                   className="lang-icon"
                   alt="English"
                 />
@@ -107,7 +111,7 @@ const Navbar = (props) => {
                 }}
               >
                 <img
-                  src={require("../../assets/icons/de.svg").default}
+                  src={deFlag}
                   className="lang-icon"
                   alt="Deutsch"
                 />
@@ -156,7 +160,7 @@ const Navbar = (props) => {
                   onClick={() => setLang("en")}
                 >
                   <img
-                    src={require("../../assets/icons/en.svg").default}
+                    src={enFlag}
                     className="lang-icon"
                     alt="English"
                   />
@@ -167,7 +171,7 @@ const Navbar = (props) => {
                   onClick={() => setLang("de")}
                 >
                   <img
-                    src={require("../../assets/icons/de.svg").default}
+                    src={deFlag}
                     className="lang-icon"
                     alt="Deutsch"
                   />
