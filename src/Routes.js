@@ -37,7 +37,7 @@ const Routes = () => {
   return (
     <main>
       <RouterRoutes>
-        <Route path='/' element={<Landing />} />
+        <Route path='/' element={<Landing deviceType={deviceType} />} />
         <Route path='/projects' element={<Projects />} />
         {/* <Route path='/contact' element={<Contact />} /> */}
         <Route path='*' element={<NotFound />} />

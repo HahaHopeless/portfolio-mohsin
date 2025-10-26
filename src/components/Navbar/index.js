@@ -78,7 +78,7 @@ const Navbar = (props) => {
           
           <div className="lang-selector animated" onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}>
             <img
-              src={require(`../../assets/icons/${props.lang}.svg`)}
+              src={require(`../../assets/icons/${props.lang}.svg`).default}
               className="lang-icon"
               alt={props.lang}
             />
@@ -93,7 +93,7 @@ const Navbar = (props) => {
                 }}
               >
                 <img
-                  src={require("../../assets/icons/en.svg")}
+                  src={require("../../assets/icons/en.svg").default}
                   className="lang-icon"
                   alt="English"
                 />
@@ -107,7 +107,7 @@ const Navbar = (props) => {
                 }}
               >
                 <img
-                  src={require("../../assets/icons/de.svg")}
+                  src={require("../../assets/icons/de.svg").default}
                   className="lang-icon"
                   alt="Deutsch"
                 />
@@ -156,7 +156,7 @@ const Navbar = (props) => {
                   onClick={() => setLang("en")}
                 >
                   <img
-                    src={require("../../assets/icons/en.svg")}
+                    src={require("../../assets/icons/en.svg").default}
                     className="lang-icon"
                     alt="English"
                   />
@@ -167,7 +167,7 @@ const Navbar = (props) => {
                   onClick={() => setLang("de")}
                 >
                   <img
-                    src={require("../../assets/icons/de.svg")}
+                    src={require("../../assets/icons/de.svg").default}
                     className="lang-icon"
                     alt="Deutsch"
                   />

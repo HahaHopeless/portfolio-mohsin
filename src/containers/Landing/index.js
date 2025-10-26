@@ -1,5 +1,5 @@
 import "./styles.css";
-import React, { useEffect, useState, useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import ScrollUp from "../../components/ScrollUp";
@@ -7,14 +7,12 @@ import Intro1 from "../../components/Intro1";
 import Intro2 from "../../components/Intro2";
 import Intro3 from "../../components/Intro3";
 
-const Landing = () => {
+const Landing = ({ deviceType }) => {
   const fadeInOut = () => {
     setTimeout(() => {
       return "fade-out";
     }, 200);
   };
-
-  const [deviceType, setDeviceType] = useState("");
   
   // Create a ref to store the GSAP context
   const [ctx] = useState(() => gsap.context(() => {}));
@@ -39,28 +37,6 @@ const Landing = () => {
       ctx.revert(); // This will kill all GSAP animations created by this context
     };
   }, [ctx]);
-
-  useEffect(() => {
-    function handleResize() {
-      // Determine device type based on window width
-      if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
-        setDeviceType("laptop");
-      } else if (window.innerWidth >= 481 && window.innerWidth <= 768) {
-        setDeviceType("tablet");
-      } else if (window.innerWidth >= 320 && window.innerWidth <= 480) {
-        setDeviceType("mobile");
-      } else if (window.innerWidth >= 1025) {
-        setDeviceType("desktop");
-      }
-    }
-    
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <>

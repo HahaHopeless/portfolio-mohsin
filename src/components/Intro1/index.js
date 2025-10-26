@@ -154,7 +154,7 @@ const Intro1 = ({ deviceType }) => {
       // Revert all GSAP animations created in this context
       ctx.revert();
     };
-  }, []);
+  }, [deviceType]);
 
   // const interactivity = {
   //   mode: "scroll",
