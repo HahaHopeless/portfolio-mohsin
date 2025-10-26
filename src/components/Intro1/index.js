@@ -9,7 +9,6 @@ import gsap from "gsap";
 import { Timeline } from "gsap/gsap-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
-import { saveAs } from "file-saver";
 import dpImage from "../../assets/images/dp.png";
 // import { deviceType === 'mobile', isTablet, isDesktop } from "react-device-detect";
 
@@ -297,7 +296,7 @@ const Intro1 = ({ deviceType }) => {
             isStopped={false}
           /> */}
 
-          <img src={dpImage} style={style} alt="Profile picture of Mohsin Kamal Akbar" />
+          <img src={dpImage} style={style} alt="Mohsin Kamal Akbar" />
 
           {/* <div className='eyes-follow'>
             <div className='eyes'>
