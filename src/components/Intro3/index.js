@@ -9,7 +9,6 @@ import { EffectCards } from "swiper/modules";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-import { Timeline } from "gsap/gsap-core";
 
 import "./styles.css";
 import { FormattedMessage } from "react-intl";
@@ -25,84 +24,80 @@ export default function Intro3({ deviceType }) {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    var t1 = new Timeline();
 
-    t1.fromTo(
-      ".tech",
-      {
-        transform: "translateX(-120vw)",
-      },
-      {
-        transform: "translateX(0)",
-        scrollTrigger: {
-          trigger: ".tech",
-          toggleActions: "play none none none",
-          start: "top center",
-          end: "+=100%",
-          scrub: 1,
+    // Add a small delay to ensure DOM is fully rendered
+    const timer = setTimeout(() => {
+      // Create separate animations for each element
+      gsap.fromTo(
+        ".tech",
+        {
+          transform: "translateX(-120vw)",
         },
-        markers: true,
-      }
-    )
-      .fromTo(
+        {
+          transform: "translateX(0)",
+          scrollTrigger: {
+            trigger: ".intro-3",
+            toggleActions: "play none none reverse",
+            start: "top 80%",
+            end: "center center",
+            scrub: 1,
+          },
+        }
+      );
+
+      gsap.fromTo(
         ".stack",
         { transform: "translateX(-120vw)" },
         {
           transform: "translateX(0)",
           scrollTrigger: {
-            trigger: ".stack",
-            toggleActions: "play none none none",
-            start: "center center",
-            end: "+=100%",
-            scrub: 2,
+            trigger: ".intro-3",
+            toggleActions: "play none none reverse",
+            start: "top 60%",
+            end: "center center",
+            scrub: 1.5,
           },
-          markers: true,
         }
-      )
-      .fromTo(
+      );
+
+      gsap.fromTo(
         ".cards-stack",
-        { opacity: 0 },
+        { opacity: 0, y: 50 },
         {
           opacity: 1,
+          y: 0,
           scrollTrigger: {
-            trigger: ".stack",
-            toggleActions: "play none none none",
-            start: "center center",
-            end: "+=90%",
-            scrub: 3,
+            trigger: ".intro-3",
+            toggleActions: "play none none reverse",
+            start: "top 70%",
+            end: "center center",
+            scrub: 2,
           },
-          markers: true,
         }
-      )
-      .fromTo(
+      );
+
+      gsap.fromTo(
         ".stack-bg",
         { opacity: 0 },
         {
           opacity: 0.2,
           scrollTrigger: {
-            trigger: ".stack-bg",
-            toggleActions: "play none none none",
-            start: "+=180%",
-            end: "+=190%",
+            trigger: ".intro-3",
+            toggleActions: "play none none reverse",
+            start: "top 50%",
+            end: "bottom center",
             scrub: 1,
           },
-          markers: true,
         }
       );
 
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: ".intro-3",
-        pin: ".intro-3",
-        start: "center center",
-        end: "+=1900",
-        // scrub: 1,
-        // markers: true,
-      },
-    });
+      // Refresh ScrollTrigger to recalculate positions
+      ScrollTrigger.refresh();
+    }, 100);
 
     //ScrollTrigger broke react-router. Below is a fix for it.
     return () => {
+      clearTimeout(timer);
       ScrollTrigger.getAll().forEach((instance) => {
         instance.kill();
       });
