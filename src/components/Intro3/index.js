@@ -13,6 +13,13 @@ import gsap from "gsap";
 import "./styles.css";
 import { FormattedMessage } from "react-intl";
 
+// Import SVG icons
+import html5Icon from "../../assets/icons/html5.svg";
+import css3Icon from "../../assets/icons/css3.svg";
+import jsIcon from "../../assets/icons/js.svg";
+import reactIcon from "../../assets/icons/react.svg";
+import nodejsIcon from "../../assets/icons/nodejs.svg";
+
 export default function Intro3({ deviceType }) {
   // var swiper = new Swiper(".swiper-container", {
   //   spaceBetween: 30,
@@ -152,7 +159,7 @@ export default function Intro3({ deviceType }) {
         >
           <SwiperSlide>
             <img
-              src={require("../../assets/icons/html5.svg")}
+              src={html5Icon}
               style={{
                 width: "290px",
                 height: "320px",
@@ -163,7 +170,7 @@ export default function Intro3({ deviceType }) {
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={require("../../assets/icons/css3.svg")}
+              src={css3Icon}
               style={{
                 width: "290px",
                 height: "320px",
@@ -174,7 +181,7 @@ export default function Intro3({ deviceType }) {
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={require("../../assets/icons/js.svg")}
+              src={jsIcon}
               style={{
                 width: "400px",
                 height: "320px",
@@ -185,7 +192,7 @@ export default function Intro3({ deviceType }) {
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={require("../../assets/icons/react.svg")}
+              src={reactIcon}
               style={{
                 width: "250px",
                 height: "320px",
@@ -196,7 +203,7 @@ export default function Intro3({ deviceType }) {
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={require("../../assets/icons/nodejs.svg")}
+              src={nodejsIcon}
               style={{
                 width: "250px",
                 height: "320px",
