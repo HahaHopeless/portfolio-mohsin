@@ -1,5 +1,5 @@
 [build]
-  command = "npm install --legacy-peer-deps && npm run build" # install with legacy peer deps flag then build
+  command = "npm run build" # install with legacy peer deps flag then build
   functions = "built-lambda" # netlify-lambda builds to this folder AND Netlify reads functions from here
   publish = "build" # create-react-app builds to this folder, Netlify should serve all these files statically
 
