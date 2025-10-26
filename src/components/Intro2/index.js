@@ -10,11 +10,11 @@ import { Timeline } from "gsap/gsap-core";
 import dotGrid from "../../assets/images/dotGrid2.svg";
 
 const Intro2 = ({ deviceType }) => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: animationData,
+  // };
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -156,7 +156,7 @@ const Intro2 = ({ deviceType }) => {
       });
       gsap.killTweensOf(window);
     };
-  }, []);
+  }, [deviceType]);
 
   // const interactivity = {
   //   mode: "scroll",
@@ -193,6 +193,7 @@ const Intro2 = ({ deviceType }) => {
         src={dotGrid}
         className='dot-grid-intro-2'
         title='This photo was taken and edited on a cheap Android phone'
+        alt="Decorative dot grid pattern"
       />
 
       <div className='container-fluid row '>

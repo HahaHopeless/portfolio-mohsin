@@ -1,7 +1,5 @@
 import "./styles.css";
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import { FormattedMessage } from "react-intl";
+import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

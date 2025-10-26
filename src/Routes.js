@@ -3,7 +3,6 @@ import { Routes as RouterRoutes, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import Footer from "./components/Footer";
 import Landing from "./containers/Landing";
-import Contact from "./containers/Contact";
 import Projects from "./containers/Projects";
 import NotFound from "./containers/NotFound";
 

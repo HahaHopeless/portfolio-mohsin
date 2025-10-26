@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { IntlProvider } from "react-intl";
 import { connect } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
-import ReactAnime from "react-animejs";
 // import { isMobile, isTablet, isDesktop } from "react-device-detect";
 import Navbar from "../components/Navbar";
 import Routes from "../Routes";

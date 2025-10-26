@@ -1,13 +1,11 @@
 import "./styles.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 // import Lottie from "react-lottie";
-import Lottie from "lottie-react";
-import useMightyMouse from "react-hook-mighty-mouse";
-// import animationData from "../../assets/animations/dev2.json";
-import animationData from "../../assets/animations/developer.json";
+// import useMightyMouse from "react-hook-mighty-mouse";
+// import animationData from "../../assets/animations/developer.json";
 import { Timeline } from "gsap/gsap-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
@@ -16,16 +14,16 @@ import dpImage from "../../assets/images/dp.png";
 // import { deviceType === 'mobile', isTablet, isDesktop } from "react-device-detect";
 
 const Intro1 = ({ deviceType }) => {
-  const handleDownload = () => {
-    //Use the commented part only when you get the CONTENT of the file instead of the whole file...
-    // let blob = new Blob([require("../../assets/documents/CV.docx")], {
-    //   type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document'",
-    // });
-    saveAs(
-      require("../../assets/documents/resume.pdf"),
-      "CV - Mohsin Kamal Akbar.pdf"
-    );
-  };
+  // const handleDownload = () => {
+  //   //Use the commented part only when you get the CONTENT of the file instead of the whole file...
+  //   // let blob = new Blob([require("../../assets/documents/CV.docx")], {
+  //   //   type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document'",
+  //   // });
+  //   saveAs(
+  //     require("../../assets/documents/resume.pdf"),
+  //     "CV - Mohsin Kamal Akbar.pdf"
+  //   );
+  // };
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -299,7 +297,7 @@ const Intro1 = ({ deviceType }) => {
             isStopped={false}
           /> */}
 
-          <img src={dpImage} style={style} />
+          <img src={dpImage} style={style} alt="Profile picture of Mohsin Kamal Akbar" />
 
           {/* <div className='eyes-follow'>
             <div className='eyes'>

@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -163,6 +163,7 @@ export default function Intro3({ deviceType }) {
                 height: "320px",
                 objectFit: "contain",
               }}
+              alt="HTML5 logo"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -173,6 +174,7 @@ export default function Intro3({ deviceType }) {
                 height: "320px",
                 objectFit: "contain",
               }}
+              alt="CSS3 logo"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -183,6 +185,7 @@ export default function Intro3({ deviceType }) {
                 height: "320px",
                 objectFit: "contain",
               }}
+              alt="JavaScript logo"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -193,6 +196,7 @@ export default function Intro3({ deviceType }) {
                 height: "320px",
                 objectFit: "contain",
               }}
+              alt="React logo"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -203,6 +207,7 @@ export default function Intro3({ deviceType }) {
                 height: "320px",
                 objectFit: "contain",
               }}
+              alt="Node.js logo"
             />
           </SwiperSlide>
           {/* <SwiperSlide>Mongo DB</SwiperSlide>

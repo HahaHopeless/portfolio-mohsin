@@ -1,13 +1,6 @@
 import "./styles.css";
 import React from "react";
 import { FormattedMessage } from "react-intl";
-import { Link } from "react-router-dom";
-import github from "../../assets/icons/github.svg";
-import facebook from "../../assets/icons/facebook.svg";
-import instagram from "../../assets/icons/instagram.svg";
-import linkedin from "../../assets/icons/linkedin.svg";
-import fiverr from "../../assets/icons/fiverr.svg";
-import { EnvelopeFill } from "react-bootstrap-icons";
 
 const Footer = ({ deviceType }) => {
   return (
